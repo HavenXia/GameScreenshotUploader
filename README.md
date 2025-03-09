@@ -43,3 +43,23 @@ python monitor.py
 ## 技术支持
 
 如有问题，请提交 Issue。
+
+## 开机自启动设置
+
+如果你想让程序在 Windows 开机时自动运行，可以按照以下步骤操作：
+
+1. 首先将程序打包为 EXE 文件：
+```bash
+# 安装 PyInstaller
+pip install pyinstaller
+
+# 打包成 EXE（在项目根目录下运行）
+pyinstaller --onefile monitor.py
+```
+
+2. 设置开机自启动：
+   - 按 `Win + R` 键
+   - 输入 `shell:startup` 打开启动文件夹
+   - 将生成的 EXE 文件（在 `dist` 文件夹中）的快捷方式复制到启动文件夹中
+
+这样，每次开机时程序就会自动运行了。
